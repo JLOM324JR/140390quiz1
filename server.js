@@ -11,6 +11,12 @@ var app = express();
 
 app.set('view engine', 'ejs');
 
+app.get('/', function (req, res){
+    connection.query('SELECT * FROM students', function (error, results, fields) {
+        console.log('DATA'+results);
+        res.render('pages/home',{home : results})
+      });
+});
 app.get('/home', function (req, res){
     connection.query('SELECT * FROM students', function (error, results, fields) {
         console.log('DATA'+results);
