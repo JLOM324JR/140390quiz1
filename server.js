@@ -12,7 +12,7 @@ var app = express();
 app.set('view engine', 'ejs');
 
 app.get('/home', function (req, res){
-    connection.query('SELECT * FROM student', function (error, results, fields) {
+    connection.query('SELECT * FROM students', function (error, results, fields) {
         console.log('DATA'+results);
         res.render('pages/home',{home : results})
       });
