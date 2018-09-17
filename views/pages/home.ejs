@@ -1,0 +1,26 @@
+<% include ../partials/header %>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>FIRSTNAME</th>
+            <th>LASTNAME</th>
+            <th>FIRSTNAME</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% home.forEach(function(result) {%>
+        <tr>
+            <td scope="row"><%= result.sid %></td>
+            <td><%= result.title %></td>
+            <td><%= result.firstname %></td>
+            <td><%= result.lastname %></td>
+        </tr>
+    <%}); %>
+    </tbody>
+</table>
+
+
+
+<% include ../partials/footer %>
