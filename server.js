@@ -11,8 +11,13 @@ var app = express();
 
 app.set('view engine', 'ejs');
 
-app.get('/Home', function (req, res){
-    connection.query('SELECT * FROM student')
-    
-
+app.get('/home', function (req, res){
+    connection.query('SELECT * FROM student', function (error, results, fields) {
+        console.log('DATA'+results);
+        res.render('pages/home',{home : data})
+      });
 });
+
+console.log('App is running at http://localhost:8080');
+
+app.listen(8080);
