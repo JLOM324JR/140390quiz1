@@ -1,26 +1,12 @@
 <% include ../partials/header %>
 <div class="jumbotron">
-    <table class="table">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>TITLE</th>
-            <th>FIRSTNAME</th>
-            <th>LASTNAME</th>
-           
-        </tr>
-    </thead>
-    <tbody>
-    <% home.forEach(function(result) {%>
-        <tr>
-            <td scope="row"><%= result.sid %></td>
-            <td><%= result.title %></td>
-            <td><%= result.firstname %></td>
-            <td><%= result.lastname %></td>
-        </tr>
-    <%}); %>
-    </tbody>
-</table>
+    <h1 class="display-3">140-390 QUIZ1</h1>
+    <p class="lead">RADTANAPORN  CHOEKAN</p>
+    <hr class="my-2">
+    <p>5930213024 SOFTWARE ENGINEERING</p>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="/about" role="button">GO!</a>
+    </p>
 </div>
 
   <% include ../partials/footer %>
